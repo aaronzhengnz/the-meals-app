@@ -11,9 +11,9 @@ const MealDetailsScreen = ({ route, navigation }) => {
       headerRight: () => {
         return (
           <HeaderButtons HeaderButtonComponent={TheHeaderButton}>
-            <HeaderItem 
+            <HeaderItem
               title="Favourites"
-              iconName="ios-star"/>
+              iconName="ios-star" />
           </HeaderButtons>
         )
       },
@@ -21,23 +21,23 @@ const MealDetailsScreen = ({ route, navigation }) => {
   }, [navigation]);
 
 
-    return (
-      <View style={styles.screen}>
-        <Text>{meal.title}</Text>
-        <Button
-          title="Back to Categories"
-          onPress={() => navigation.navigate('Categories')}
-        />
-      </View>
-    );
-  };
+  return (
+    <View style={styles.screen}>
+      <Text>{meal.title}</Text>
+      <Button
+        title="Back to Categories"
+        onPress={() => navigation.navigate('Categories')}
+      />
+    </View>
+  );
+};
 
-  const styles = StyleSheet.create({
-    screen: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-  });
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
-  export default MealDetailsScreen;
+export default MealDetailsScreen;
